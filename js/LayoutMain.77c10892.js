@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["LayoutMain"],{d81b:function(n,t,e){"use strict";e.r(t);var a=function(){var n=this,t=n.$createElement,e=n._self._c||t;return e("div",{staticClass:"container"},[e("router-view")],1)},i=[],u={name:"MainLayout"},o=u,r=e("2877"),s=Object(r["a"])(o,a,i,!1,null,null,null);t["default"]=s.exports}}]);
+//# sourceMappingURL=LayoutMain.77c10892.js.map
