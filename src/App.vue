@@ -21,6 +21,10 @@ html{
 
 .reset-link{
   text-decoration: none;
+  color:inherit;
+  &:hover{
+    text-decoration: none;
+  }
 }
 .w100{
   width: 100%;

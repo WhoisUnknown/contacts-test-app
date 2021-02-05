@@ -12,7 +12,7 @@
               required
               label="First name"
               label-for="input-1"
-              :invalid-feedback="$v.fields.firstName.$error ? 'Поле заполнено неверно' : ''">
+              :invalid-feedback="$v.fields.firstName.$error ? 'The field is filled incorrectly' : ''">
               <b-form-input
                 id="input-1"
                 v-model="fields.firstName"
@@ -28,7 +28,7 @@
               required
               label="Last name"
               label-for="input-2"
-              :invalid-feedback="$v.fields.lastName.$error ? 'Поле заполнено неверно' : ''">
+              :invalid-feedback="$v.fields.lastName.$error ? 'The field is filled incorrectly' : ''">
               <b-form-input
                 id="input-2"
                 v-model="fields.lastName"
@@ -46,7 +46,7 @@
         required
         label="Email"
         label-for="input-3"
-        :invalid-feedback="$v.fields.email.$error ? 'Поле заполнено неверно' : ''">
+        :invalid-feedback="$v.fields.email.$error ? 'The field is filled incorrectly' : ''">
         <b-form-input
           id="input-3"
           v-model="fields.email"
@@ -102,8 +102,9 @@
       <b-button
         size="md"
         variant="success"
-        :disabled="loading || $v.fields.$invalid"
+        :disabled="loading"
         :class="$s.saveButton"
+        class="ui-button"
         @click="saveOrAdd">
         {{ isEdit ? 'Edit' : 'Add' }}
       </b-button>
@@ -195,6 +196,8 @@ export default {
         }
         this.loading = false;
         this.$bvModal.hide('create-or-edit');
+      } else {
+        this.$v.fields.$touch();
       }
     },
   },
@@ -205,8 +208,5 @@ export default {
 .saveButton{
   width: 72px;
   height: 50px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
 }
 </style>

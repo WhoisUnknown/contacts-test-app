@@ -1,10 +1,9 @@
 <template>
   <b-card
     :class="$s.card"
-    :body-class="$s.cardBody">
-    <div
-      :class="$s.arrowBlock"
-      @click="show=!show">
+    :body-class="$s.cardBody"
+    @click="show=!show">
+    <div :class="$s.arrowBlock">
       <b-icon
         icon="chevron-right"
         :rotate="show ? 90 : 0"
@@ -24,7 +23,7 @@
           <b-button
             :id="`popover-button-sync${_uid}`"
             :class="$s.popoverButton"
-            @click="showPopup = !showPopup">
+            @click.stop="showPopup = !showPopup">
             <b-icon
               icon="three-dots"
               aria-hidden="true" />
@@ -61,11 +60,31 @@
             </tr>
             <tr>
               <td>Email</td>
-              <td>{{ item.email }}</td>
+              <td>
+                <a
+                  v-if="item.phone"
+                  class="reset-link"
+                  :href="`mailto:${item.email}`"
+                  @click.stop>
+                  {{ item.email }}
+                </a>
+              </td>
             </tr>
             <tr>
               <td>Phone</td>
-              <td>{{ item.phone }}</td>
+              <td>
+                <a
+                  v-if="item.phone"
+                  class="reset-link"
+                  :href="`tel:${item.phone}`"
+                  @click.stop>
+                  {{ item.phone }}
+                </a>
+                <template
+                  v-else>
+                  -
+                </template>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -98,17 +117,14 @@ export default {
   transition: background-color 0.3s;
   padding: 0;
   .cardBody{
-    padding: 15px;
-    padding-right: 18px;
+    padding: 18.5px;
     display: flex;
     .arrowBlock{
-      width: 36px;
-      padding-right: 11px;
+      width: 14px;
       padding-top: 8px;
+      margin-right: 18.5px;
+      text-align: center;
       font-size: 12px;
-      display: flex;
-      justify-content: flex-end;
-      cursor: pointer;
     }
     .title{
       font-size: 16px;
@@ -120,12 +136,9 @@ export default {
       color: #7F9893;
     }
   }
-  &:hover{
-    background-color: #F8FAF9;
-  }
   .divider{
     margin:18.5px 0;
-    border-top: 2px solid #DAE3DF;
+    border-top: 1px solid #DAE3DF;
   }
   .table{
     td:first-child{
@@ -145,6 +158,9 @@ export default {
     color: #404F4C;
     padding: 0;
     border: none;
+  }
+  &:hover{
+    background-color: #F8FAF9;
   }
 }
 .list{

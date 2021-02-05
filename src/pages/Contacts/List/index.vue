@@ -7,6 +7,7 @@
       <b-button
         :class="$s.addButton"
         size="md"
+        class="ui-button"
         variant="success"
         @click="openEditOrCreateModal()">
         Add
@@ -120,10 +121,9 @@ export default {
     openRemoveModal(item) {
       this.$bvModal.msgBoxConfirm(`Are you sure you want to delete the contact: ${item.firstName} ${item.lastName}`, {
         title: 'Confirmation',
-        size: 'sm',
-        buttonSize: 'sm',
-        okVariant: 'success',
+        okVariant: 'danger',
         modalClass: 'ui-modal',
+        footerClass: 'mt-3',
         centered: true,
       }).then(value => {
         if (value) {
@@ -147,9 +147,6 @@ export default {
 .addButton{
   width: 72px;
   height: 38px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
 }
 .search{
   margin-top:15px;

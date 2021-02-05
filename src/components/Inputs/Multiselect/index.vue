@@ -18,17 +18,22 @@ export default {
 
 <style lang="scss" module="$s">
 .multiselect{
-  border: 2px solid #DFE7E3;
-  border-radius: 5px;
   color: #404F4C;
   font-weight: 500;
   font-size: 14px;
   height: 36px;
   min-height: 36px;
   [class="multiselect__tags"]{
-    border:none;
+    padding-top: 6px;
     height: 36px;
     min-height: 36px;
+    border: 2px solid #DFE7E3;
+    border-radius: 5px;
+  }
+  [class*="multiselect__single"],[class*="multiselect__input"]{
+    color: #404F4C;
+    font-weight: 500;
+    font-size: 14px;
   }
 }
 </style>
