@@ -3,7 +3,6 @@
     id="create-or-edit"
     modal-class="ui-modal"
     :title="isEdit ? 'Edit' : 'Add'"
-    :content-class="$s.modal"
     centered>
     <div>
       <div class="d-flex">
@@ -203,9 +202,6 @@ export default {
 </script>
 
 <style lang="scss" module="$s">
-.modal{
-  max-width: 400px;
-}
 .saveButton{
   width: 72px;
   height: 50px;

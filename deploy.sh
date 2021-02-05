@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:WhoisUnknown/dogs-list.git master:gh-pages
+git push -f git@github.com:WhoisUnknown/contacts-test-app.git master:gh-pages
 
 cd -
