@@ -1,0 +1,19 @@
+
+.ui-modal{
+  .modal-header{
+    border-bottom: none;
+    padding:  1rem 1rem 0;
+    .modal-title{
+      font-size: 24px;
+      font-weight: bold;
+      padding: 32px 39px 25px;
+    }
+  }
+  .modal-body{
+    padding:0 45px 0 55px;
+  }
+  .modal-footer{
+    border-top: none;
+    padding: 0 45px 50px;
+  }
+}

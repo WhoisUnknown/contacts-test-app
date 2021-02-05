@@ -1,0 +1,12 @@
+
+
+$body-color: #404F4C;
+$success: #43765A;
+$error: #862043;
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+@import './components/inputs.scss';
+@import './components/modals.scss';
+
+
