@@ -1,17 +1,30 @@
-# Тестовое задание
+# Test task
 
-Стек: Vue,vuex, vue-router
+## Result
+[Show result on github pages](https://whoisunknown.github.io/contacts-test-app/#/contacts)
+## Description
+Please take a look at the [mockup](https://xd.adobe.com/view/7ca44613-2127-4e51-4a56-7b7..)
 
-Проект разврёнут с помощью vue-cli 3.
+That's a simple CRUD interface. The user should be able to see, filter, add, edit and delete contacts. Form has a validation.
 
-Для линтинга используется eslint с подкорректированным конфигом
+The aim of this task to see your attention to details and willing to provide the best product.
 
-# 1. Основная страница
+To save your time:
 
-Url: 'http://localhost:8080/'
+- Use Bootstrap styles. Don't mind colors and fonts in mockup. Just make it clean.
+- No pagination required.
+- Use [vue-multiselect](https://vue-multiselect.js.org/) or what ever plugin you like to make the country selector.
+- Use [vuelidate](https://vuelidate.js.org/) for validation or what ever plugin you like
+
+Publish the result to Github or Bitbucket repository.
+
+**Take your time and make the best UX as you can. Your product should feel like Apple iPhone interface or something. Put much attention to the user experience.**
 
 
-## Project setup
+## Technologies used
+Vue, vuex, vue-router, vue-bootstrap, Scss for styles
+
+## Local project setup
 ```
 npm install
 ```
